@@ -1,16 +1,16 @@
-pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu118
+torch==2.2.2
+transformers==4.37.2
+accelerate==0.27.2
 
-pip install transformers==4.37.2
-pip install accelerate==0.27.2
-pip install bitsandbytes==0.43.1
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-chroma==0.2.4
+langchain-experimental==0.3.4
+langchain-huggingface==0.2.0
+langchainhub==0.1.21
 
-pip install langchain==0.3.25
-pip install langchain-community==0.3.24
-pip install langchain-chroma==0.2.4
-pip install langchain-experimental==0.3.4
-pip install langchain-huggingface==0.2.0
-pip install langchainhub==0.1.21
-
-pip install python-dotenv==1.1.0
-pip install pypdf
-pip install tiktoken==0.12.0
+python-dotenv==1.1.0
+pypdf
+tiktoken==0.12.0
+sentence-transformers
+chromadb
