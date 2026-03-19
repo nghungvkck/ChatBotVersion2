@@ -49,6 +49,8 @@ pip install -r requirements.txt
 >
 > - **Giải pháp 1 (khuyến nghị):** dùng Python 3.11/3.12.
 > - **Giải pháp 2:** cài torch phiên bản phù hợp với Python 3.13+ (vd: `pip install torch==2.10.0`).
+>
+> Nếu bạn gặp lỗi **xung đột dependencies** (vd: transformers vs langchain-huggingface), đó là do phiên bản cũ không tương thích. Đã cập nhật `requirements.txt` với phiên bản mới hơn để giải quyết.
 
 > Nếu bạn gặp lỗi do thiếu `streamlit`, cài thêm:
 > `pip install streamlit`

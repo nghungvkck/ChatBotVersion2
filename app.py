@@ -27,22 +27,18 @@ def load_models():
 st.set_page_config(page_title="PDF RAG Assistant", layout="wide")
 st.title("📄 PDF RAG Assistant")
 
-# Load model
-if not st.session_state.model_loaded:
-    st.info("Đang tải model...")
-    embeddings, llm = load_models()
-
-    st.session_state.embeddings = embeddings
-    st.session_state.llm = llm
-    st.session_state.model_loaded = True
-    st.success("Model sẵn sàng!")
-    st.rerun()
-
-
 # Upload PDF
 uploaded_file = st.file_uploader("Upload PDF", type=["pdf"])
 
 if uploaded_file and st.button("Xử lý PDF"):
+    # Load model only when processing PDF
+    if not st.session_state.model_loaded:
+        with st.spinner("Đang tải model..."):
+            embeddings, llm = load_models()
+            st.session_state.embeddings = embeddings
+            st.session_state.llm = llm
+            st.session_state.model_loaded = True
+
     with st.spinner("Đang xử lý..."):
         processor = PDFProcessor(st.session_state.embeddings)
         docs = processor.process(uploaded_file)
