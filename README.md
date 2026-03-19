@@ -24,11 +24,14 @@
 
 ### 1) Chuẩn bị Python
 
-- Khuyến nghị dùng **Python 3.11+**.
+- Khuyến nghị dùng **Python 3.11 hoặc 3.12** (Torch hiện chưa hỗ trợ Python 3.13).
 - Tạo và kích hoạt virtual environment (đảm bảo không cài thư viện toàn cục):
 
 ```powershell
-python -m venv .venv
+# Nếu bạn có nhiều phiên bản Python, dùng py launcher để tạo venv với Python 3.11:
+py -3.11 -m venv .venv
+
+# Kích hoạt venv (PowerShell)
 .\.venv\Scripts\Activate.ps1
 ```
 
@@ -41,6 +44,11 @@ python -m venv .venv
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+> Nếu bạn gặp lỗi **không tìm thấy torch==2.2.2** (hoặc tương tự), đó là vì phiên bản Python đang dùng không tương thích với torch 2.2.x.
+>
+> - **Giải pháp 1 (khuyến nghị):** dùng Python 3.11/3.12.
+> - **Giải pháp 2:** cài torch phiên bản phù hợp với Python 3.13+ (vd: `pip install torch==2.10.0`).
 
 > Nếu bạn gặp lỗi do thiếu `streamlit`, cài thêm:
 > `pip install streamlit`
