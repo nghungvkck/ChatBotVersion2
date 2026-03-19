@@ -6,6 +6,18 @@
 - **HuggingFace Transformers** (LLM + embedding)
 - **LangChain Hub** để tải prompt RAG
 
+## 🖼️ Minh hoạ (images)
+
+1. `images/image.png`
+2. `images/image-1.png`
+3. `images/xy_ly_text.jpg`
+
+![Overview](./images/image.png)
+
+![Vector DB](./images/image-1.png)
+
+![Xử lý text](./images/xy_ly_text.jpg)
+
 ---
 
 ## 🚀 Bắt đầu (Cài đặt môi trường)
